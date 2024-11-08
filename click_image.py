@@ -1,30 +1,30 @@
 #click_image.py this program clicks the image
 # of the text through the raspberry pi camera
 
-import time
-import libcamera # importing the libraries 
-import os
-from picamera2 import Picamera2
-speak=" VisualRead Assist Powering On "
-os.popen('espeak "'+speak+'" --stdout | aplay 2>/dev/null').read()
-speak=" "
-os.popen('espeak "'+speak+'" --stdout | aplay 2>/dev/null').read()
-speak=" Clicking Picture "
-os.popen('espeak "'+speak+'" --stdout | aplay 2>/dev/null').read()
+import subprocess
 
-picam=Picamera2()
-picam.brightness = 150 # Adjusting camera settings
-picam.contrast = 90
+def capture_image(filename="test_image.jpg"):
+    try:
+        # Use espeak to announce the start of the image capture process
+        # This will provide an audio cue saying "Clicking picture"
+        subprocess.run(["espeak", "Clicking picture"], check=True)
 
-config = picam.create_preview_configuration(main={"size": (512, 512)}) 
-config["transform"] = libcamera.Transform(hflip=1, vflip=1)
+        # Capture image using libcamera-still command
+        # The `-o` flag specifies the output filename for the image
+        # `sudo` is used as libcamera-still may require root privileges
+        subprocess.run(["sudo", "libcamera-still", "-o", filename], check=True)
+        
+        # Use espeak to announce the completion of the image capture
+        # This will provide an audio cue saying "Picture clicked"
+        subprocess.run(["espeak", "Picture clicked"], check=True)
+        
+        # Print a confirmation message in the console about the saved image
+        print(f"Image captured and saved as {filename}")
+    
+    except subprocess.CalledProcessError as e:
+        # If an error occurs during any of the subprocess calls, this block will be triggered
+        print("Failed to capture image:", e)
 
-picam.start() 
-time.sleep(2)
+# Call the capture function, specifying the filename for the saved image
+capture_image("test_image.jpg")
 
-picam.capture_file("img.png") # clicking picture
-
-picam.close()
-
-speak=" Picture clicked "
-os.popen('espeak "'+speak+'" --stdout | aplay 2>/dev/null').read()
