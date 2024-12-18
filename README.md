@@ -7,9 +7,9 @@ Visual Read Assist is an innovative project designed to aid individuals with vis
 ## Features
 
 - **Image Capture**: Utilizes the Raspberry Pi camera to capture high-quality images.
-- **Optical Character Recognition (OCR)**: Converts captured images into machine-readable text using Tesseract.
+- **Optical Character Recognition (OCR)**: Converts captured images into machine-readable text using `tesseract`.
 - **Text-to-Speech Conversion**: Reads out the extracted text in real-time using `espeak`.
-- **Audio Feedback**: Provides audio cues for user interaction, such as "Clicking picture" and "Picture clicked."
+- **Audio Feedback**: Provides audio cues for user interaction, such as `Clicking picture` and `Picture clicked`.
 - **Portable and Low-Cost**: Designed to be affordable and easy to use.
 
 ---
@@ -51,3 +51,18 @@ Visual Read Assist is an innovative project designed to aid individuals with vis
   sudo apt-get update
   sudo apt-get install espeak tesseract-ocr libcamera-dev python3-pip
   pip install pytesseract pillow
+
+- Verify the installation of Tesseract OCR:
+  ```bash
+  tesseract --version
+Ensure it displays the installed version without errors.
+
+## Usage
+- Step 1: Capture an Image
+Run the `click_image.py` script to capture an image:
+  ```bash
+  python3 click_image.py
+ - The program announces "Clicking picture" via audio.
+ - Captures an image using the Raspberry Pi camera and saves it as test_image.jpg.
+ - Announces "Picture clicked" once the image is saved.
+ 
