@@ -79,4 +79,15 @@ Run the `image_to_text_speech.py` script to process the captured image:
 - Prints the text in the terminal for reference.
 
   ---
- 
+
+ ## Project Workflow
+
+ ### 1.Image Capture : 
+- Captures an image using the Raspberry Pi camera.
+- Provides audio feedback to indicate the image capture process.
+### Text Extraction:
+- Converts the captured image into text using OCR (Tesseract).
+### Text-to-Speech Conversion:
+- Synthesizes the extracted text into real-time audio feedback.
+
+---
