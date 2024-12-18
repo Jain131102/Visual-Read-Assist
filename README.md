@@ -91,3 +91,35 @@ Run the `image_to_text_speech.py` script to process the captured image:
 - Synthesizes the extracted text into real-time audio feedback.
 
 ---
+
+## File Structure
+- `click_image.py`: Captures an image using the Raspberry Pi camera and provides audio cues during the process.
+- `image_to_text_speech.py`: Processes the captured image to extract text and convert it to speech.
+- `test_image.jpg`: The default filename for the captured image.
+- Dependencies:
+ - `pytesseract`: For OCR functionality.
+ - `espeak`: For text-to-speech conversion.
+ - `libcamera-still`: For image capture.
+
+---
+
+## Future Enhancements
+- Add support for multiple languages and handwriting recognition in OCR.
+- Enable users to select voices and adjust speech rates in text-to-speech.
+- Integrate with wearable devices, such as smart glasses, for hands-free operation.
+- Improve OCR performance using advanced AI and machine learning models.
+
+  ---
+
+## References
+
+- [Raspberry Pi Documentation](https://www.raspberrypi.com/documentation/)
+- [Tesseract OCR GitHub](https://github.com/tesseract-ocr/tesseract)
+- [Espeak Documentation](https://espeak.sourceforge.net/)
+- [ItsFOSS Raspberry Pi Projects](https://itsfoss.com/raspberry-pi-projects/)
+
+---
+
+## License
+
+This project is open-source and available under the [MIT License](https://opensource.org/licenses/MIT).
