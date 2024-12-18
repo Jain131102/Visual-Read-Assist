@@ -58,7 +58,7 @@ Visual Read Assist is an innovative project designed to aid individuals with vis
 Ensure it displays the installed version without errors.
 
 ## Usage
-# Step 1: Capture an Image
+### Step 1: Capture an Image
 Run the `click_image.py` script to capture an image:
   ```bash
   python3 click_image.py
