@@ -58,6 +58,7 @@ Visual Read Assist is an innovative project designed to aid individuals with vis
 Ensure it displays the installed version without errors.
 
 ## Usage
+
 ### Step 1: Capture an Image
 Run the `click_image.py` script to capture an image:
  ```bash
@@ -66,4 +67,16 @@ Run the `click_image.py` script to capture an image:
 - The program announces "Clicking picture" via audio.
 - Captures an image using the Raspberry Pi camera and saves it as test_image.jpg.
 - Announces "Picture clicked" once the image is saved.
+
+### Step 2: Extract Text and Convert to Speech
+Run the `image_to_text_speech.py` script to process the captured image:
+ ```bash
+    python3 image_to_text_speech.py
+```
+- The program reads the captured image (`test_image.jpg` by default).
+- Extracts text using Tesseract OCR.
+- Reads the extracted text aloud using `espeak`.
+- Prints the text in the terminal for reference.
+
+  ---
  
