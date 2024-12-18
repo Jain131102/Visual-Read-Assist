@@ -97,10 +97,9 @@ Run the `image_to_text_speech.py` script to process the captured image:
 - `image_to_text_speech.py`: Processes the captured image to extract text and convert it to speech.
 - `test_image.jpg`: The default filename for the captured image.
 - Dependencies:
- - `pytesseract`: For OCR functionality.
- - `espeak`: For text-to-speech conversion.
- - `libcamera-still`: For image capture.
-
+  - `pytesseract`: For OCR functionality.
+  - `espeak`: For text-to-speech conversion.
+  - `libcamera-still`: For image capture.
 ---
 
 ## Future Enhancements
