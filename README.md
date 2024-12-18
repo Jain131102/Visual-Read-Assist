@@ -60,9 +60,10 @@ Ensure it displays the installed version without errors.
 ## Usage
 ### Step 1: Capture an Image
 Run the `click_image.py` script to capture an image:
-  ```bash
-  python3 click_image.py
- - The program announces "Clicking picture" via audio.
- - Captures an image using the Raspberry Pi camera and saves it as test_image.jpg.
- - Announces "Picture clicked" once the image is saved.
+ ```bash
+    python3 click_image.py
+```
+- The program announces "Clicking picture" via audio.
+- Captures an image using the Raspberry Pi camera and saves it as test_image.jpg.
+- Announces "Picture clicked" once the image is saved.
  
