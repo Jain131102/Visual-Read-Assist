@@ -28,10 +28,12 @@ Visual Read Assist is an innovative project designed to aid individuals with vis
 - Python 3
 - Raspbian OS
 - Required Libraries:
+  - `subprocess`
   - `pytesseract`
-  - `Pillow`
+  - `aplay`
+  - `PIL (Pillow)`
   - `espeak`
-  - `libcamera`
+  - `libcamera-still`
   - `tesseract-ocr`
 
 ---
